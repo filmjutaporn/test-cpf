@@ -1,0 +1,69 @@
+@import "../../styles/variable";
+
+.wrap-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  border-bottom: 1px solid $border;
+  margin-bottom: 36px;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    border: none;
+  }
+
+  .cover-tab-list {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    align-items: flex-start;
+
+    .cover-tabs {
+      display: flex;
+      gap: 8px;
+      font-size: $regular15;
+      color: $bodyLight;
+      cursor: pointer;
+
+      .active {
+        color: #0a6ee1;
+      }
+    }
+
+    .tabs-active {
+      border-bottom: 2px solid #0a6ee1;
+      padding-bottom: 30px;
+
+      @media screen and (max-width: 767px) {
+        padding-bottom: 12px;
+      }
+    }
+  }
+
+  .cover-icon {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: $bodyLight;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 16px;
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    i {
+      border-right: 1px solid $border;
+      padding: 0px 10px;
+
+      &:nth-child(2) {
+        border: none;
+        padding-right: 0px;
+      }
+    }
+
+    .active {
+      color: #0a6ee1;
+    }
+  }
+}

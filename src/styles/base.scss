@@ -1,0 +1,126 @@
+@import "./variable";
+@import url("https://fonts.googleapis.com/css2?family=Are+You+Serious&family=Poppins:wght@400;500&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Are You Serious", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+//  =========== font weight =========== //
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+//  =========== text =========== //
+h4 {
+  margin: 0;
+  font-size: $h4;
+}
+
+h5 {
+  margin: 0;
+  font-size: $h5;
+}
+
+h6 {
+  margin: 0;
+  font-size: $h6;
+}
+
+//  =========== flex =========== //
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+//  =========== color =========== //
+.color-white {
+  color: $white;
+}
+
+//  =========== custom bar chart =========== //
+.wrap-bar-chart {
+  width: 100%;
+
+  .rv-xy-plot {
+    width: 100% !important;
+    &__axis {
+      &__line {
+        display: none;
+      }
+      &__tick__text {
+        fill: $bodyLight;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      &__tick__line {
+        display: none;
+      }
+    } // end axis
+
+    &__inner {
+      width: 650px !important;
+
+      background-color: $white;
+    } // end inner
+
+    &__series--bar {
+      rect {
+        width: 16px !important;
+        transform: translate(10, 0) !important;
+      }
+    } // end series
+
+    &__grid-lines__line {
+      stroke: $border;
+    }
+
+    &__series--mark {
+      display: none;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,75 @@
+@import "./variable";
+
+.wrap-main {
+  background-color: $bg;
+  width: 100%;
+  overflow-y: auto;
+  height: calc(100vh - 66px);
+
+  .cover-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 31px;
+
+    .cover-sort {
+      display: flex;
+      gap: 16px;
+    }
+  }
+
+  .cover-card-widget {
+    display: grid;
+    padding: 0px 22px;
+    background-color: $white;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 33px;
+    width: 500px;
+    border-radius: 20px;
+    align-items: center;
+  }
+
+  .cover-statistic {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(200px, 350px);
+    margin: 0px 31px;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      margin: 0px 16px;
+    }
+  }
+
+  .cover-credit-card {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: auto minmax(200px, 350px);
+    margin: 0px 31px 31px 31px;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      margin: 0px 16px 31px 16px;
+    }
+  }
+
+  .cover-card-revenue {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 23px;
+    background-color: $white;
+    border-radius: 20px;
+    gap: 33px;
+    margin: 0px 31px 30px 31px;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: auto;
+      gap: 50px;
+      margin: 0px 16px 30px 16px;
+    }
+
+    :last-child {
+      gap: 0px;
+    }
+  }
+}

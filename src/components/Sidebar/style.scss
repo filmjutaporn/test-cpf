@@ -1,0 +1,24 @@
+@import "../../styles/variable";
+
+.wrap-side-bar {
+  width: 270px;
+  height: calc(100vh - 66px);
+  background-color: $white;
+  overflow-y: auto;
+  transition: all 0.3s ease-out;
+  margin-left: -270px;
+  overflow-x: hidden;
+  border-right: 1px solid $border;
+
+  a {
+    text-decoration: none;
+  }
+
+  &.open-side-bar {
+    margin-left: 0;
+  }
+
+  &.side-bar-mobile {
+    min-width: 100%;
+  }
+}

@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import MenuBar from "./components/MenuBar";
+import Sidebar from "./components/Sidebar";
+import { useApp } from "./hooks/useApp";
 
-function App() {
+function App(props) {
+  const { children } = props;
+  const { handleToggleSidebar, screenWidth, isShowSideBar } = useApp();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <MenuBar handleToggleSidebar={handleToggleSidebar} />
+
+      <div
+        className="d-flex w-100"
+        style={{ overflowY: `${screenWidth < 767 ? "hidden" : "auto"}` }}
+      >
+        <Sidebar isShowSideBar={isShowSideBar} screenWidth={screenWidth} />
+
+        <div
+          style={{ width: `${isShowSideBar ? "calc(100% - 270px)" : "100%"}` }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          {children}
+        </div>
+      </div>
+    </>
   );
 }
 

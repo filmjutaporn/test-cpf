@@ -1,0 +1,44 @@
+@import "../../styles/variable";
+
+.wrap-transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .cover-left-side {
+    display: flex;
+    gap: 18px;
+    .cover-icon-item {
+      background-color: #f79009;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+    }
+
+    .cover-type {
+      display: flex;
+      flex-direction: column;
+
+      .name {
+        color: $heading;
+        font-size: $regular14;
+      }
+
+      .date {
+        color: $bodyLight;
+        font-size: 11px;
+      }
+    }
+  }
+
+  .cover-total {
+    color: $heading;
+    font-size: $regular14;
+    font-weight: 500;
+  }
+}

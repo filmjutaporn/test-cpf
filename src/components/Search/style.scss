@@ -1,0 +1,55 @@
+@import "../../styles/variable";
+
+.wrap-search {
+  width: 100%;
+  background-color: aqua;
+  border-radius: 14px;
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  input {
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    height: 100%;
+    border: 1px solid #e8e9eb;
+    padding: 0px 15px;
+    padding-left: 54px;
+    color: $heading;
+    font-size: 18px;
+
+    @media screen and (max-width: 1024px) {
+      padding-left: 8px;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  i {
+    position: absolute;
+    font-size: 20px;
+  }
+
+  .icon-search {
+    left: 15px;
+    color: $bodyLight;
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .icon-filter {
+    right: 15px;
+    color: $heading;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+}

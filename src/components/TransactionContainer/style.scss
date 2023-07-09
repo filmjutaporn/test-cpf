@@ -1,0 +1,30 @@
+@import "../../styles/variable";
+
+.wrap-transaction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $white;
+  border-radius: 20px;
+  flex: 0.3;
+  padding: 29px 24px;
+
+  .cover-transaction-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    i {
+      font-size: 26px;
+      color: $bodyLight;
+    }
+  }
+
+  .cover-display-item {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 100%;
+  }
+}

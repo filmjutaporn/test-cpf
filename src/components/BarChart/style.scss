@@ -1,0 +1,59 @@
+@import "../../styles/variable";
+
+.wrap-bar-chart {
+  .custom-tooltip {
+    padding: 10px 15px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+    // border: 1px solid $border;
+    box-shadow: 0px 8px 24px 0px rgba(44, 63, 88, 0.1);
+
+    .date {
+      color: $bodyLight;
+      font-size: $regular14;
+    }
+
+    .cover-value {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &:nth-child(1) {
+          border-right: 1px solid $border;
+          padding-right: 8px;
+        }
+
+        span {
+          color: $heading;
+          font-size: $regular15;
+        }
+      }
+
+      .color {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .custom-tooltip::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../styles/variable";
+
+.wrap-card-revenue-item {
+  background-color: $white;
+  display: flex;
+  width: 100%;
+  gap: 22px;
+  border-right: 1px solid $border;
+  padding-right: 15px;
+
+  @media screen and (max-width: 1024px) {
+    border: none;
+    padding: 0px;
+  }
+
+  &:last-child {
+    border: none;
+  }
+
+  .cover-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+      color: $bodyLight;
+      font-size: $regular15;
+    }
+
+    .cover-total {
+      display: flex;
+      gap: 9px;
+      align-items: flex-end;
+
+      .total {
+        font-size: 30px;
+        color: $heading;
+        font-weight: 500;
+      }
+
+      .cover-trade {
+        display: flex;
+        color: #d92d20;
+
+        .trade {
+          font-size: $regular15;
+        }
+
+        &.up {
+          color: #07a721;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../styles/variable";
+
+.custom-tooltip {
+  background: $white;
+  padding: 0px 12px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  color: #0a6ee1;
+  font-size: 12px;
+  font-weight: 500;
+}

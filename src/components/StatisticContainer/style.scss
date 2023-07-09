@@ -1,0 +1,51 @@
+@import "../../styles/variable";
+
+.wrap-statistics {
+  display: flex;
+  flex-direction: column;
+  flex: 0.7;
+  background: $white;
+  border-radius: 20px;
+  padding: 29px 24px;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 0px;
+  }
+
+  .cover-header-statistics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+
+    .text-title {
+      font-size: $h5;
+      font-weight: 500;
+      color: $heading;
+    }
+  }
+
+  .cover-revenue {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin-bottom: 17px;
+
+    .revenue-group {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+
+      h6 {
+        color: $heading;
+        font-weight: 400;
+      }
+
+      span {
+        font-size: $regular14;
+        color: $bodyLight;
+      }
+    }
+  }
+}

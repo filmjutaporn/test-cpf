@@ -1,0 +1,39 @@
+@import "../styles/variable";
+
+.wrap-product-page {
+  background-color: $bg;
+  padding: 31px;
+  overflow-y: auto;
+  height: calc(100vh - 128px);
+
+  @media screen and (max-width: 1024px) {
+    padding: 16px;
+  }
+
+  .cover-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .cover-sort {
+      display: flex;
+      gap: 16px;
+    }
+  }
+
+  .cover-table-product {
+    padding: 24px;
+    background: $white;
+    border-radius: 20px;
+  }
+
+  .cover-search-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    @media screen and (max-width: 767px) {
+      gap: 12px;
+    }
+  }
+}

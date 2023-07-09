@@ -1,0 +1,52 @@
+@import "../../styles/variable";
+
+.wrap-balance-container {
+  border-radius: 20px;
+  display: flex;
+  background-color: #0a6ee1;
+  flex: 0.3;
+  flex-direction: column;
+  margin-bottom: 30px;
+  padding: 29px 24px;
+  // height: 100%;
+
+  .cover-balance-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: $white;
+
+    i {
+      font-size: 26px;
+    }
+  }
+
+  .total-balance {
+    color: $white;
+    font-size: 36px;
+  }
+
+  .cover-tab {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .cover-text-summary {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    margin-top: 19px;
+
+    .key {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .value {
+      color: $white;
+      font-weight: 500;
+      margin-left: 8px;
+    }
+  }
+}

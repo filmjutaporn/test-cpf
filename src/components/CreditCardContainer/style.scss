@@ -1,0 +1,87 @@
+@import "../../styles/variable";
+
+.wrap-credit-card-container {
+  display: flex;
+  flex-direction: column;
+  flex: 0.7;
+  background: $white;
+  border-radius: 20px;
+  padding: 29px 24px;
+
+  .cover-header-credit-card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .text-title {
+      font-size: $h5;
+      font-weight: 500;
+      color: $heading;
+    }
+  }
+
+  .cover-card {
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr) 1fr;
+    gap: 48px;
+
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: auto;
+    }
+
+    .cover-left {
+      padding-bottom: 30px;
+      border-bottom: 1px solid $border;
+    }
+
+    .cover-right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border-bottom: 1px solid $border;
+      padding-bottom: 20px;
+
+      .cover-text {
+        display: grid;
+        font-size: $regular14;
+        grid-template-columns: 140px 1fr;
+
+        .title {
+          color: $bodyLight;
+          width: fit-content;
+        }
+
+        .value {
+          color: $heading;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .cover-btn {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 48px;
+    padding-top: 20px;
+    align-items: center;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: auto;
+    }
+
+    .cover-btn-right {
+      display: flex;
+      width: 80%;
+      gap: 24px;
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+  }
+}

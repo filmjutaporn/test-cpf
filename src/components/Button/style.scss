@@ -1,0 +1,16 @@
+@import "../../styles/variable";
+
+.wrap-button {
+  display: flex;
+  justify-content: center;
+  padding: 7px 8px;
+  border-radius: 14px;
+  gap: 5px;
+  cursor: pointer;
+  align-items: center;
+  font-weight: 500;
+
+  i {
+    font-size: 20px;
+  }
+}
