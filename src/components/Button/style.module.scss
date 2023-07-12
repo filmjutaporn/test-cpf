@@ -9,8 +9,12 @@
   cursor: pointer;
   align-items: center;
   font-weight: 500;
+  .i-group {
+    font-size: 14px !important;
+  }
 
   i {
     font-size: 20px;
   }
+
 }

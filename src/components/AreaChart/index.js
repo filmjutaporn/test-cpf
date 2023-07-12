@@ -29,7 +29,7 @@ const AreaChart = (props) => {
         </defs>
         <Area
           type="monotone"
-          dataKey="uv"
+          dataKey="y"
           stroke={stroke}
           dot={false}
           fill={`url(#colorUV-${fill})`}

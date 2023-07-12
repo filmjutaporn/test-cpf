@@ -12,9 +12,18 @@
     align-items: center;
     padding: 31px;
 
+    @media screen and (max-width: 767px) {
+      padding: 16px;
+    }
+
     .cover-sort {
       display: flex;
       gap: 16px;
+      align-items: center;
+
+      @media screen and (max-width: 767px) {
+        gap: 8px;
+      }
     }
   }
 
@@ -32,7 +41,7 @@
   .cover-statistic {
     gap: 30px;
     display: grid;
-    grid-template-columns: minmax(300px, 1fr) minmax(200px, 350px);
+    grid-template-columns: auto 30%;
     margin: 0px 31px;
 
     @media screen and (max-width: 1024px) {
@@ -44,7 +53,7 @@
   .cover-credit-card {
     gap: 30px;
     display: grid;
-    grid-template-columns: auto minmax(200px, 350px);
+    grid-template-columns: auto 30%;
     margin: 0px 31px 31px 31px;
 
     @media screen and (max-width: 1024px) {

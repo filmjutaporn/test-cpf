@@ -1,26 +1,32 @@
 import React from "react";
-import "./style.scss";
+import styles from "./style.module.scss";
+import PropTypes from "prop-types";
 
 const TransactionItem = (props) => {
-  const { name = "", date = '', total = 0 } = props;
+  const { name = "", date = "", total = 0, icon = "" } = props;
   return (
-    <div className="wrap-transaction-item">
-      <div className="cover-left-side">
-        <div className="cover-icon-item">
-          <i className="icon-cart" />
-        </div>
+    <div className={styles["wrap-transaction-item"]}>
+      <div className={styles["cover-left-side"]}>
+        {icon}
 
-        <div className="cover-type">
-          <span className="name">{name}</span>
-          <span className="date">{date}</span>
+        <div className={styles["cover-type"]}>
+          <span className={styles.name}>{name}</span>
+          <span className={styles.date}>{date}</span>
         </div>
       </div>
 
-      <div className="cover-total">
+      <div className={styles["cover-total"]}>
         <span>-${total}</span>
       </div>
     </div>
   );
+};
+
+TransactionItem.propTypes = {
+  name: PropTypes.string,
+  date: PropTypes.string,
+  total: PropTypes.number,
+  icon: PropTypes.string,
 };
 
 export default TransactionItem;

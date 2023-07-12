@@ -16,7 +16,7 @@
 
     :nth-child(1),
     :nth-last-child(1) {
-      i {
+      .icon-sort {
         display: none;
       }
     }
@@ -37,7 +37,7 @@
     display: grid;
     grid-template-columns: 50px auto 150px 150px 100px 100px 100px 50px;
     padding: 12px 0px;
-    font-size: $regular15;
+    font-size: $regular15 !important;
     color: $heading;
     align-items: center;
     background: $white;
@@ -70,5 +70,14 @@
         display: none;
       }
     }
+  }
+
+  .table-empty {
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $bodyLight;
+    font-weight: 500;
   }
 }

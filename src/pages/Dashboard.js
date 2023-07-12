@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/dashboard.scss";
+import styles from "../styles/dashboard.module.scss";
 import Button from "../components/Button";
 import Dropdown from "../components/Dropdown";
 import CardRevenueItem from "../components/CardRevenueItem";
@@ -8,19 +8,18 @@ import BalanceContainer from "../components/BalanceContainer";
 import CreditCardContainer from "../components/CreditCardContainer";
 import TransactionContainer from "../components/TransactionContainer";
 import { mockRevenue } from "../mock";
-import App from "../App";
-
+import MainLayout from "../MainLayout";
 
 const Dashboard = () => {
   return (
-    <App>
-      <div className="wrap-main">
-        <div className="cover-header">
+    <MainLayout>
+      <div className={styles["wrap-main"]}>
+        <div className={styles["cover-header"]}>
           <div>
             <h4 className="font-weight-500">Overview</h4>
           </div>
 
-          <div className="cover-sort">
+          <div className={styles["cover-sort"]}>
             <Button
               icon={"icon-download"}
               backgroundColor={"#fff"}
@@ -30,7 +29,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="cover-card-revenue">
+        <div className={styles["cover-card-revenue"]}>
           {mockRevenue.map((item, index) => (
             <CardRevenueItem
               key={index}
@@ -43,17 +42,17 @@ const Dashboard = () => {
           ))}
         </div>
 
-        <div className="cover-statistic">
+        <div className={styles["cover-statistic"]}>
           <StatisticContainer />
           <BalanceContainer />
         </div>
 
-        <div className="cover-credit-card">
-          <CreditCardContainer />
+        <div className={styles["cover-credit-card"]}>
+          <CreditCardContainer/>
           <TransactionContainer />
         </div>
       </div>
-    </App>
+    </MainLayout>
   );
 };
 

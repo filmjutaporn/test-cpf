@@ -2,9 +2,10 @@
 
 .wrap-card-revenue-item {
   background-color: $white;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr);
   width: 100%;
-  gap: 22px;
+  gap: 22px !important;
   border-right: 1px solid $border;
   padding-right: 15px;
 
@@ -30,17 +31,21 @@
     .cover-total {
       display: flex;
       gap: 9px;
-      align-items: flex-end;
+      // align-items: flex-end;
 
       .total {
         font-size: 30px;
         color: $heading;
         font-weight: 500;
+        padding-top: 10px;
       }
 
       .cover-trade {
         display: flex;
         color: #d92d20;
+        margin-top: -5px;
+        align-items: flex-end;
+        height: 100%;
 
         .trade {
           font-size: $regular15;

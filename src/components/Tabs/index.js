@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Badge from "../Badge";
-import "./style.scss";
+import styles from "./style.module.scss";
 import classNames from "classnames";
 import { mockTabList, mockDisplayType } from "../../mock";
 
@@ -8,14 +8,14 @@ const Tabs = () => {
   const [type, setType] = useState("list");
 
   return (
-    <div className="wrap-tabs">
-      <div className="cover-tab-list">
+    <div className={styles["wrap-tabs"]}>
+      <div className={styles["cover-tab-list"]}>
         {mockTabList.map((item, index) => (
           <div
-            className={classNames("cover-tabs", index == 0 && "tabs-active")}
+            className={classNames(`${styles["cover-tabs"]}`, index == 0 && `${styles["tabs-active"]}`)}
             key={index}
           >
-            <span className={classNames("", index == 0 && "active")}>
+            <span className={classNames("", index == 0 &&  `${styles.active}`)}>
               {item?.name}
             </span>
             <Badge
@@ -28,11 +28,15 @@ const Tabs = () => {
         ))}
       </div>
 
-      <div className="cover-icon">
+      <div className={styles["cover-icon"]}>
         {mockDisplayType.map((item, index) => (
           <i
             key={index}
-            className={classNames(item?.icon, item?.name == type && "active")}
+            className={classNames(
+              "cursor-pointer",
+              item?.icon,
+              item?.name == type && `${styles.active}`
+            )}
             onClick={() => setType(item?.name)}
           />
         ))}

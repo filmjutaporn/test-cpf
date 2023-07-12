@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.scss";
+import styles from "./style.module.scss";
 import Button from "../Button";
 import Dropdown from "../Dropdown";
 import CreditCard from "../CreditCard";
@@ -8,9 +8,9 @@ import { mockCreditCard } from "../../mock";
 
 const CreditCardContainer = () => {
   return (
-    <div className="wrap-credit-card-container">
-      <div className="cover-header-credit-card-container">
-        <span className="text-title">My cards</span>
+    <div className={styles["wrap-credit-card-container"]}>
+      <div className={styles["cover-header-credit-card-container"]}>
+        <span className={styles["text-title"]}>My cards</span>
         <Dropdown
           label="5880 **** **** 8854"
           isShowBorder={true}
@@ -18,19 +18,19 @@ const CreditCardContainer = () => {
         />
       </div>
 
-      <div className="cover-card">
-        <div className="cover-left">
+      <div className={styles["cover-card"]}>
+        <div className={styles["cover-left"]}>
           <CreditCard />
         </div>
 
-        <div className="cover-right">
+        <div className={styles["cover-right"]}>
           {mockCreditCard.map((item, index) => (
             <>
-              <div className="cover-text" key={index}>
-                <div className="title">
+              <div className={styles["cover-text"]} key={index}>
+                <div className={styles.title}>
                   <span>{item?.key}:</span>
                 </div>
-                <div className="value">
+                <div className={styles.value}>
                   <span>{item?.value}</span>
                 </div>
               </div>
@@ -39,7 +39,7 @@ const CreditCardContainer = () => {
         </div>
       </div>
 
-      <div className="cover-btn">
+      <div className={styles["cover-btn"]}>
         <Button
           icon="icon-plus"
           iconColor={"#0A6EE1"}
@@ -48,9 +48,14 @@ const CreditCardContainer = () => {
           fontColor={"#0A6EE1"}
           width="auto"
         />
-        <div className="cover-btn-right">
-          <Button label="Pay Debt" backgroundColor="#0A6EE1" fontColor="#fff" width="100%" />
-          <Button label="Cancel" isShowBorder={true} width="100%"/>
+        <div className={styles["cover-btn-right"]}>
+          <Button
+            label="Pay Debt"
+            backgroundColor="#0A6EE1"
+            fontColor="#fff"
+            width="100%"
+          />
+          <Button label="Cancel" isShowBorder={true} width="100%" />
         </div>
       </div>
     </div>

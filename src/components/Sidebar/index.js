@@ -1,9 +1,10 @@
 import React from "react";
-import "./style.scss";
+import styles from "./style.module.scss";
 import { mockSidebar } from "../../mock";
-import MenuItem from "../MenuItem";
+import SidebarItem from "../SidebarItem";
 import classNames from "classnames";
 import { useSidebar } from "../../hooks/useSidebar";
+import PropTypes from "prop-types";
 
 const Sidebar = (props) => {
   const { isShowSideBar = false, screenWidth = 0 } = props;
@@ -12,14 +13,14 @@ const Sidebar = (props) => {
   return (
     <div
       className={classNames(
-        "wrap-side-bar",
-        isShowSideBar && "open-side-bar",
-        isShowSideBar && screenWidth <= 767 && "side-bar-mobile"
+        styles["wrap-side-bar"],
+        isShowSideBar && styles["open-side-bar"],
+        isShowSideBar && screenWidth <= 767 && styles["side-bar-mobile"]
       )}
     >
       {mockSidebar.map((item, index) => {
         return (
-          <MenuItem
+          <SidebarItem
             key={"menuItem" + index}
             label={item?.label}
             isShowBadge={item?.label == "Mail"}
@@ -31,9 +32,13 @@ const Sidebar = (props) => {
           />
         );
       })}
-
     </div>
   );
+};
+
+Sidebar.propTypes = {
+  screenWidth: PropTypes.number,
+  isShowSideBar: PropTypes.bool,
 };
 
 export default Sidebar;

@@ -2,20 +2,20 @@
 
 .wrap-search {
   width: 100%;
-  background-color: aqua;
+  background-color: $white;
   border-radius: 14px;
   display: flex;
   position: relative;
   align-items: center;
+  border: 1px solid #e8e9eb;
+  padding: 0px 4px;
 
   input {
     width: 100%;
     border: none;
     border-radius: 14px;
     height: 100%;
-    border: 1px solid #e8e9eb;
-    padding: 0px 15px;
-    padding-left: 54px;
+    padding: 0px 8px;
     color: $heading;
     font-size: 18px;
 
@@ -33,11 +33,12 @@
   }
 
   i {
-    position: absolute;
+    // position: absolute;
+    background-color: #fff;
     font-size: 20px;
   }
 
-  .icon-search {
+  .i-search {
     left: 15px;
     color: $bodyLight;
 
@@ -46,10 +47,17 @@
     }
   }
 
-  .icon-filter {
+  .i-close {
+    right: 50px;
+    color: $heading;
+    // margin-left: 5px;
+    cursor: pointer;
+  }
+
+  .i-filter {
     right: 15px;
     color: $heading;
-    margin-left: 5px;
+    // margin-left: 5px;
     cursor: pointer;
   }
 }

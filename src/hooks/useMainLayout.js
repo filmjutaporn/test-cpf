@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export const useApp = () => {
+export const useMainLayout = () => {
   const [isShowSideBar, setIsShowSideBar] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
 
@@ -13,7 +13,7 @@ export const useApp = () => {
     window.addEventListener("resize", getWidth);
     getWidth();
 
-    if (screenWidth < 767) {
+    if (screenWidth) {
       setIsShowSideBar(false);
     }
 

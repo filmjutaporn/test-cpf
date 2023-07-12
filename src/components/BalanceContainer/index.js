@@ -1,34 +1,36 @@
 import React from "react";
 import Badge from "../Badge";
 import BalanceLineChart from "../BalanceLineChart";
-import "./style.scss";
+import styles from "./style.module.scss";
 
 const BalanceContainer = () => {
   return (
-    <div className="wrap-balance-container">
-      <div className="cover-balance-header">
+    <div className={styles["wrap-balance-container"]}>
+      <div className={styles["cover-balance-header"]}>
         <h5 className="font-weight-500">Balance</h5>
-        <i className=" icon-more cursor-pointer" />
+        <i className="icon-more cursor-pointer" />
       </div>
 
-      <span className="total-balance">$27,500.00</span>
+      <span className={styles["total-balance"]}>$27,500.00</span>
 
-      <div className="cover-tab">
+      <div className={styles["cover-tab"]}>
         <Badge label="Income" backgroundColor={"rgba(255,255,255,0.25)"} />
         <Badge label="Expenses" fontColor={"rgba(255,255,255,0.6)"} />
       </div>
 
-      <BalanceLineChart />
+      <div className="d-flex w-100 " style={{ minHeight: "180px" }}>
+        <BalanceLineChart />
+      </div>
 
-      <div className="cover-text-summary">
+      <div className={styles["cover-text-summary"]}>
         <div>
-          <span className="key">Income:</span>
-          <span className="value">$500</span>
+          <span className={styles.key}>Income:</span>
+          <span className={styles.value}>$500</span>
         </div>
 
         <div>
-          <span className="key">Spending::</span>
-          <span className="value">$200</span>
+          <span className={styles.key}>Spending::</span>
+          <span className={styles.value}>$200</span>
         </div>
       </div>
     </div>

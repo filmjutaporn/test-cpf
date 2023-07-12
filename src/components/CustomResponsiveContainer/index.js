@@ -2,7 +2,8 @@ import React from "react";
 import { ResponsiveContainer } from "recharts";
 
 const CustomResponsiveContainer = (props) => {
-  const { isLineChart = false } = props;
+
+  console.log('props', props);
 
   return (
     <div style={{ width: "100%", height: "100%", position: "relative" }}>

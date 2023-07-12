@@ -12,8 +12,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route  path="/" element={<Dashboard />} />
+      <Route ex path="/dashboard" element={<Dashboard />} />
       <Route path="/e-commerce/products" element={<Product />} />
     </Routes>
   </BrowserRouter>

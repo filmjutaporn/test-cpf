@@ -2,15 +2,15 @@ import React from "react";
 import BarChart from "../BarChart";
 import Dropdown from "../Dropdown";
 import Button from "../Button";
-import "./style.scss";
+import styles from "./style.module.scss";
 import { ReactComponent as Calendar } from '../../static/images/icons/calendar.svg';
 
 
 const StatisticContainer = () => {
   return (
-    <div className="wrap-statistics">
-      <div className="cover-header-statistics">
-        <span className="text-title">Statistics</span>
+    <div className={styles["wrap-statistics"]}>
+      <div className={styles["cover-header-statistics"]}>
+        <span className={styles["text-title"]}>Statistics</span>
         <Dropdown
           label="19 Aug - 25 Aug"
           isShowBorder={true}
@@ -18,8 +18,8 @@ const StatisticContainer = () => {
         />
       </div>
 
-      <div className="cover-revenue">
-        <div className="revenue-group">
+      <div className={styles["cover-revenue"]}>
+        <div className={styles["revenue-group"]}>
           <Button
             icon={"icon-max"}
             backgroundColor={"#DEE8F3"}
@@ -31,7 +31,7 @@ const StatisticContainer = () => {
           </div>
         </div>
 
-        <div className="revenue-group">
+        <div className={styles["revenue-group"]}>
           <Button
             icon={"icon-min"}
             backgroundColor={"#E0EEE7"}

@@ -1,6 +1,9 @@
 @import "../../styles/variable";
 
 .wrap-bar-chart {
+  margin-left: -30px;
+  width: auto !important;
+
   .custom-tooltip {
     padding: 10px 15px;
     background-color: $white;
@@ -8,8 +11,8 @@
     flex-direction: column;
     width: fit-content;
     height: auto;
-    // border: 1px solid $border;
     box-shadow: 0px 8px 24px 0px rgba(44, 63, 88, 0.1);
+    border-radius: 8px;
 
     .date {
       color: $bodyLight;

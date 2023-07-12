@@ -1,0 +1,76 @@
+@import "../../styles/variable";
+
+.wrap-pagination {
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .cover-select-amount-page {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    span {
+      color: $bodyLight;
+      font-size: $regular15;
+    }
+  }
+
+  .cover-pagination {
+    display: flex;
+    gap: 6px;
+    font-size: $regular15;
+    color: $heading;
+
+    i {
+      font-size: 20px;
+    }
+
+    @media screen and (min-width: 391px) and (max-width: 1024px) {
+      justify-content: center;
+      width: 100%;
+
+      .wrap-button {
+        min-width: 20px !important;
+        min-height: 20px !important;
+        height: auto;
+        font-size: 12px !important;
+
+        &:nth-child(1) {
+          display: none;
+        }
+
+        &:nth-last-child(1) {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: 390px) {
+      justify-content: center;
+      width: 100%;
+
+      .wrap-button {
+        min-width: 20px !important;
+        min-height: 20px !important;
+        height: auto;
+        max-height: 22px;
+        font-size: 12px !important;
+
+        &:nth-child(1) {
+          display: none;
+        }
+
+        &:nth-last-child(1) {
+          display: none;
+        }
+      }
+    }
+  }
+}
